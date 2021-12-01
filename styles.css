@@ -31,13 +31,6 @@ input[type = "text"] {
     color: #595959;
     flex-grow: 1;
 }
-input [id="task"] {
-    display: none;
-}
-input [id="task"]: checked~p.task {
-    text-decoration: line-through;
-    color: black;
-}
 button {
     font-size: 1.5rem;
     background-color: #ffffff;

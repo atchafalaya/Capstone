@@ -56,5 +56,6 @@ function displayTaskers(arr) {
         createTaskCard(arr[i])
     }
 }
-getAllTaskers()//shows all tasks in the database
+//getAllTaskers()//shows all tasks in the database
 form.addEventListener("submit",submitFormHandler)//event listener for task submit button
+task.addEventListener("click", checkTask)

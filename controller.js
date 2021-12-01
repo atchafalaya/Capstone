@@ -1,5 +1,5 @@
 const tasks = require('./db.json')
-let taskId = 4//does it need to be 4 now?
+let taskId = 1 
 
 module.exports = {
     //Get all tasks up front
@@ -24,6 +24,9 @@ module.exports = {
         let index = tasks.findIndex(elem => elem.id ===+id)
         tasks.splice(index,1)
         res.status(200).send(tasks)
+
+    },
+
     // },
     // checkTask: (req, res) => {
     //     let {id} = req.params
@@ -31,4 +34,4 @@ module.exports = {
 
     }
         
-}
+//}
