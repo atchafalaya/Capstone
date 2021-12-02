@@ -27,6 +27,7 @@ module.exports = {
         res.status(200).send(tasks)
 
     },
+    //Strikethrough a task
     checkTask: (req, res) => {
         let {id} = req.params
         let index = tasks.findIndex(elem => elem.id ===+id)

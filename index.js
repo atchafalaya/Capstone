@@ -10,6 +10,6 @@ const {getTasks, createTask, deleteTask, checkTask} = require('./controller.js')
 app.get(`/api/tasks`, getTasks)//Gets tasks
 app.post(`/api/tasks`, createTask)//Posts new tasks
 app.delete(`/api/tasks/:id`,deleteTask)//Deletes selected tasks
-app.put(`/api/tasks/:id`, checkTask)
+app.put(`/api/tasks/:id`, checkTask)//Toggles Strikethrough selected tasks
 
 app.listen(4004, () => console.log(`Server running on 4004`))

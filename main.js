@@ -4,9 +4,7 @@ const baseURL = `http://localhost:4004/api/tasks`
 
 const tasksCallback = ({ data : tasks }) => {
    displayTaskers(tasks)
-    
 }
-
 const removeTask = id => document.getElementById(`card-${id}`).remove()
 
 const errCallback = err => console.log(err)
@@ -62,8 +60,6 @@ function displayCrossOff(id) {
         cross.classList.add('checked')
     }
 }
-
-
 getAllTaskers()//shows tasks
 
 form.addEventListener("submit",submitFormHandler)//event listener for task submit button
