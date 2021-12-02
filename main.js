@@ -1,7 +1,6 @@
 const tasksContainer = document.querySelector('#tasks-container')
 const form = document.querySelector('form')
 
-
 const baseURL = `http://localhost:4004/api/tasks`
 
 const tasksCallback = ({ data : tasks }) => {
@@ -16,7 +15,7 @@ const createTask = body => axios.post(baseURL, body).then(tasksCallback).catch(e
 
 const deleteTask = (id) => axios.delete(`${baseURL}/${id}`).then(tasksCallback).catch(errCallback)
 
-const checkTask = (id) => axios.put(`${baseURL}/${id}`).then(tasksCallback).catch(errCallback)
+const checkTask = (id) => axios.put(`${baseURL}/${id}`).then(displayCrossOff).catch(errCallback)
 
 function submitFormHandler(e) {
     e.preventDefault()
@@ -45,7 +44,6 @@ function createTaskCard(task) {
     <button id="checkBtn" onclick = "checkTask('${task.id}')">Done</button>
 
     `
-//add delete button and check functionality here
     tasksContainer.appendChild(taskCard)
 }
 
@@ -56,6 +54,12 @@ function displayTaskers(arr) {
         createTaskCard(arr[i])
     }
 }
-//getAllTaskers()//shows all tasks in the database
+function displayCrossOff() {
+    let cross = document.querySelector('.task')
+    cross.classList.add('checked')
+
+}
+ 
+getAllTaskers()//shows tasks
+
 form.addEventListener("submit",submitFormHandler)//event listener for task submit button
-task.addEventListener("click", checkTask)

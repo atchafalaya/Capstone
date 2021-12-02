@@ -2,7 +2,7 @@ const tasks = require('./db.json')
 let taskId = 1 
 
 module.exports = {
-    //Get all tasks up front
+    //Get all tasks
     getTasks: (req, res) => {
         //console.log(tasks)
         res.status(200).send(tasks)
@@ -19,6 +19,7 @@ module.exports = {
         res.status(200).send(tasks) 
         taskId++
     },
+    //Delete a task
     deleteTask: (req, res) => {
         let {id} = req.params
         let index = tasks.findIndex(elem => elem.id ===+id)
@@ -26,12 +27,13 @@ module.exports = {
         res.status(200).send(tasks)
 
     },
-
-    // },
-    // checkTask: (req, res) => {
-    //     let {id} = req.params
-    //     let index = tasks.findIndex(elem => elem.id ===+id)
-
+    checkTask: (req, res) => {
+        let {id} = req.params
+        let index = tasks.findIndex(elem => elem.id ===+id)
+        tasks[index].checked = true   
+       
+        res.status(200).send(tasks)
+         
     }
         
-//}
+}
