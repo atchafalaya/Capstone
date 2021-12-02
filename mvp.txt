@@ -1,0 +1,9 @@
+Features:
+
+Enter task
+Strikethrough task
+Delete task
+
+CSS styling
+
+Uses GET, POST, PUT, and DELETE
