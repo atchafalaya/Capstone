@@ -6,7 +6,7 @@
 
 #### Install Axios, Express, CORS
 
-![To-Do List](<blockquote class="imgur-embed-pub" lang="en" data-id="a/hbstFjy"  ><a href="//imgur.com/a/hbstFjy">To-Do List</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
+![To-Do List](https://i.imgur.com/5wbC703.png)
 
 ## Contributing
 
